@@ -21,6 +21,12 @@ public class User {
     @Nullable
     private Long id;
 
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+
     @Column(name = "birthdate", nullable = false)
     private LocalDate birthdate;
 
@@ -33,9 +39,23 @@ public class User {
             final LocalDate birthdate,
             final String email) {
 
+        if (firstName == null || firstName.isBlank()) {
+            throw new IllegalArgumentException("firstName cannot be null or blank");
+        }
+        if (lastName == null || lastName.isBlank()) {
+            throw new IllegalArgumentException("lastName cannot be null or blank");
+        }
+        if (birthdate == null) {
+            throw new IllegalArgumentException("birthdate cannot be null");
+        }
+        if (email == null || email.isBlank()) {
+            throw new IllegalArgumentException("email cannot be null or blank");
+        }
+
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthdate = birthdate;
         this.email = email;
     }
-
 }
 
