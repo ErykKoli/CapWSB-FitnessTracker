@@ -51,9 +51,5 @@ public class HealthMetrics {
         this.heartRate = heartRate;
     }
 
-    // przykładowa metoda pomocnicza obliczająca BMI
-    public double calculateBmi() {
-        double meters = height / 100.0;
-        return weight / (meters * meters);
-    }
+
 }
