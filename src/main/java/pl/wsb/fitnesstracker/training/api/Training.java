@@ -9,7 +9,7 @@ import java.util.Date;
 @Getter
 public class Training {
 
-    private Long id;
+    private long id;
 
     private User user;
 
