@@ -53,7 +53,7 @@ class DatabaseSchemaTest {
     @Test
     void shouldHaveUserEventTable() throws Exception {
         try (Connection conn = dataSource.getConnection()) {
-            assertThat(tableExists(conn, "user_event")).isTrue();
+            assertThat(tableExists(conn, "userevent")).isTrue();
         }
     }
 
