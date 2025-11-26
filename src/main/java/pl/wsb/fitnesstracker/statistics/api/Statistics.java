@@ -19,6 +19,10 @@ public class Statistics {
     @Nullable
     private Long id;
 
+    @OneToOne(optional = false)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
+    private User user;
+
     @Column(name = "total_trainings", nullable = false)
     private int totalTrainings;
 
