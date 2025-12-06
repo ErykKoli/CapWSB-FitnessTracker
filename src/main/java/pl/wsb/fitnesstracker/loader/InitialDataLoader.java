@@ -36,11 +36,6 @@ class                                        InitialDataLoader {
 
     private final JpaRepository<Training, Long> trainingRepository;
 
-    InitialDataLoader(JpaRepository<User, Long> userRepository, JpaRepository<Training, Long> trainingRepository) {
-        this.userRepository = userRepository;
-        this.trainingRepository = trainingRepository;
-    }
-
     @EventListener
     @Transactional
     @SuppressWarnings({"squid:S1854", "squid:S1481", "squid:S1192", "unused"})
