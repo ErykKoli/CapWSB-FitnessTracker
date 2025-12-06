@@ -30,7 +30,7 @@ import static java.util.Objects.isNull;
 @Slf4j
 @ToString
 @RequiredArgsConstructor
-class InitialDataLoader {
+class                                        InitialDataLoader {
 
     private final JpaRepository<User, Long> userRepository;
 
@@ -72,6 +72,7 @@ class InitialDataLoader {
         users.add(generateUser("Noah", "Miller", 39));
         users.add(generateUser("Grace", "Anderson", 33));
         users.add(generateUser("Oliver", "Swift", 29));
+        users.add(generateUser("Mikolaj", "Swiety", 2000));
 
         return users;
     }
